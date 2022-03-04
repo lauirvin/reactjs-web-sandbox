@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom';
 import styles from './styles.module.scss';
 
 const Home = (): JSX.Element => {
- const screens = [
-   { path: '/hook-api-test', title: 'Writing tests for custom API hooks', description: 'Example of writing test cases for custom API hooks' },
+  const screens = [
+    {
+      path: '/hook-api-test',
+      title: 'Writing tests for custom API hooks',
+      description: 'Example of writing test cases for custom API hooks',
+    },
   ];
 
   return (
@@ -15,7 +19,6 @@ const Home = (): JSX.Element => {
         </Link>
       ))}
     </div>
-
   );
 };
 

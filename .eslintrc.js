@@ -20,6 +20,8 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'react-hooks'],
   rules: {
+    'function-paren-newline': 0,
+    'max-len': 0,
     'operator-linebreak': 0,
     indent: 0,
     'default-param-last': 0,
