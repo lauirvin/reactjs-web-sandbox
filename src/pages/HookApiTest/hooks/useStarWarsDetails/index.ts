@@ -1,13 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
-interface Character {
-  name: string;
-}
-
-interface Film {
-  title: string;
-}
+import { Character, Film } from '../../../../types';
 
 interface ReturnType {
   characters: Character[];
