@@ -7,11 +7,11 @@ const HookApiTest = (): JSX.Element => {
     <div>
       <h1>Characters</h1>
       {characters.map(({ name }) => (
-        <p>{name}</p>
+        <p key={name}>{name}</p>
       ))}
       <h1>Films</h1>
       {films.map(({ title }) => (
-        <p>{title}</p>
+        <p key={title}>{title}</p>
       ))}
     </div>
   );

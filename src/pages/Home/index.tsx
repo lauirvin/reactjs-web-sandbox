@@ -13,7 +13,7 @@ const Home = (): JSX.Element => {
   return (
     <div className={styles.container}>
       {screens.map(({ path, title, description }) => (
-        <Link to={path}>
+        <Link key={title} to={path}>
           <p>{title}</p>
           <p>{description}</p>
         </Link>
