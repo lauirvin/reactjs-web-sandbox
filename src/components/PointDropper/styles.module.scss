@@ -1,0 +1,21 @@
+@import '../../styles/colors';
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .box {
+    width: 100px;
+    height: 100px;
+  }
+
+  .connectorContainer {
+    position: relative;
+  }
+
+  .connector {
+    width: 25px;
+    height: 25px;
+  }
+}
