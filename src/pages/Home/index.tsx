@@ -8,6 +8,11 @@ const Home = (): JSX.Element => {
       title: 'Writing tests for custom API hooks',
       description: 'Example of writing test cases for custom API hooks',
     },
+    {
+      path: '/canvas-drawing-board',
+      title: 'Canvas Drawing Board',
+      description: 'Drawing lines and shapes on a canvas',
+    },
   ];
 
   return (
