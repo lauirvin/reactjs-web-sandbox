@@ -9,9 +9,9 @@ const Home = (): JSX.Element => {
       description: 'Example of writing test cases for custom API hooks',
     },
     {
-      path: '/canvas-drawing-board',
-      title: 'Canvas Drawing Board',
-      description: 'Drawing lines and shapes on a canvas',
+      path: '/dnd-connect-arrows',
+      title: 'Drag and Drop connect arrows',
+      description: 'Drag and drop element to connect them with arrows',
     },
   ];
 

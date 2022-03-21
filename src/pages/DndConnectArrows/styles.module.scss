@@ -1,7 +1,13 @@
 .container {
   display: flex;
+  flex-direction: column;
+}
+
+.connectorContainer {
+  display: flex;
   justify-content: space-between;
   width: 500px;
+  margin-bottom: 1rem;
 }
 
 .boxContainer {

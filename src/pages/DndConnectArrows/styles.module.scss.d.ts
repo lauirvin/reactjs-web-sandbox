@@ -1,6 +1,7 @@
 export type Styles = {
   box: string;
   boxContainer: string;
+  connectorContainer: string;
   container: string;
   dot: string;
 };
