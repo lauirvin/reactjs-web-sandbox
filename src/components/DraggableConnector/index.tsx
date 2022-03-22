@@ -1,4 +1,4 @@
-import { memo, useCallback, useState, DragEvent, useRef } from 'react';
+import { memo, useCallback, useState, DragEvent, useRef, TouchEvent } from 'react';
 import { useDrag } from 'react-dnd';
 import Arrow from 'react-xarrows';
 
@@ -31,12 +31,15 @@ export const DraggableConnector = memo<Props>(({ id }) => {
   const baseRef = useRef<HTMLDivElement>(null);
   const draggingRef = useRef<HTMLDivElement>(null);
 
-  const handleOnDrag = useCallback((e: DragEvent<HTMLDivElement>) => {
+  const handleOnDrag = useCallback((e: DragEvent<HTMLDivElement> | TouchEvent<HTMLDivElement>) => {
+    const left = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const top = 'touches' in e ? e.touches[0].clientY : e.clientY;
+
     setDraggingStyle({
       position: 'fixed',
       opacity: 0,
-      left: e.clientX,
-      top: e.clientY,
+      left,
+      top,
       transform: 'none',
       zIndex: -1,
       cursor: 'grabbing',
@@ -50,6 +53,8 @@ export const DraggableConnector = memo<Props>(({ id }) => {
   return (
     <div style={{ position: 'relative' }}>
       <div
+        onTouchMove={handleOnDrag}
+        onTouchEnd={handleOnDragEnd}
         onDrag={handleOnDrag}
         onDragEnd={handleOnDragEnd}
         ref={dragRef}

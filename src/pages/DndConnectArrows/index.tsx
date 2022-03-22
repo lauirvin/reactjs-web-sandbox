@@ -40,7 +40,7 @@ const DndConnectArrows = (): JSX.Element => {
   return (
     <div className={styles.container}>
       {connectors.map(({ draggableId, droppableId }) => (
-        <div className={styles.connectorContainer}>
+        <div key={draggableId + droppableId} className={styles.connectorContainer}>
           <DraggableConnector id={draggableId} />
           <DroppableConnector id={droppableId} handleAddArrows={handleAddArrows} />
         </div>
